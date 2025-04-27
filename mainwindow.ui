@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>638</width>
+    <height>482</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Виртуальный журнал преподавателя</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayoutMain">
+    <item>
+     <widget class="QGroupBox" name="groupBoxSubjects">
+      <property name="title">
+       <string>Список предметов</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayoutSubjects">
+       <item>
+        <widget class="QListWidget" name="subjectListWidget"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutSubjectButtons">
+         <item>
+          <widget class="QPushButton" name="addSubjectButton">
+           <property name="text">
+            <string>Добавить предмет</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="removeSubjectButton">
+           <property name="text">
+            <string>Удалить предмет</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="mainTabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabGrades">
+       <attribute name="title">
+        <string>Оценки</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutGrades">
+        <item>
+         <widget class="QGroupBox" name="groupBoxGradeEntry">
+          <property name="title">
+           <string>Запись оценки</string>
+          </property>
+          <layout class="QFormLayout" name="formLayoutGrades">
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelStudentName">
+             <property name="text">
+              <string>ФИО студента</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="studentNameLineEdit"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelGradeValue">
+             <property name="text">
+              <string>Оценка</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="gradeValueSpinBox">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labelCourseGrades">
+             <property name="text">
+              <string>Курс</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="courseSpinBoxGrades">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelGroupGrades">
+             <property name="text">
+              <string>Группа</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="groupLineEditGrades"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutGradeButtons">
+          <item>
+           <widget class="QPushButton" name="addGradeRecordButton">
+            <property name="text">
+             <string>Добавить оценку</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="updateGradeRecordButton">
+            <property name="text">
+             <string>Обновить оценку</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="removeGradeRecordButton">
+            <property name="text">
+             <string>Удалить оценку</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="gradesTableWidget">
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <property name="horizontalHeaderLabels" stdset="0">
+           <stringlist>
+            <string>Имя студента</string>
+            <string>Оценка</string>
+            <string>Курс</string>
+            <string>Группа</string>
+           </stringlist>
+          </property>
+          <column>
+           <property name="text">
+            <string>ФИО</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Оценка</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Курс</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Группа</string>
+           </property>
+          </column>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabExamCredit">
+       <attribute name="title">
+        <string>Зачеты и экзамены</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutExamCredit">
+        <item>
+         <widget class="QGroupBox" name="groupBoxExamCreditEntry">
+          <property name="title">
+           <string>Запись зачетов и экзаменов</string>
+          </property>
+          <layout class="QFormLayout" name="formLayoutExamCredit">
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelStudentNameExam">
+             <property name="text">
+              <string>ФИО студента</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="studentNameLineEditExam"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelCreditExam">
+             <property name="text">
+              <string>Зачет</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="creditCheckBoxExam"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labelExamGradeExam">
+             <property name="text">
+              <string>Экзамен</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="examGradeSpinBoxExam">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelCourseExam">
+             <property name="text">
+              <string>Курс</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="courseSpinBoxExam">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="labelGroupExam">
+             <property name="text">
+              <string>Группа</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="groupLineEditExam"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutExamCreditButtons">
+          <item>
+           <widget class="QPushButton" name="addExamCreditRecordButton">
+            <property name="text">
+             <string>Добавить запись</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="updateExamCreditRecordButton">
+            <property name="text">
+             <string>Обновить запись</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="removeExamCreditRecordButton">
+            <property name="text">
+             <string>Удалить запись</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="examCreditTableWidget">
+          <property name="columnCount">
+           <number>9</number>
+          </property>
+          <property name="horizontalHeaderLabels" stdset="0">
+           <stringlist>
+            <string>Имя студента</string>
+            <string>Зачет</string>
+            <string>Экзамен</string>
+            <string>Курс</string>
+            <string>Группа</string>
+           </stringlist>
+          </property>
+          <column>
+           <property name="text">
+            <string>ФИО</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Курс</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Группа</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Экзамен</string>
+           </property>
+          </column>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
