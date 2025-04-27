@@ -72,3 +72,72 @@ void Student::setCredit(bool credit) {
 void Student::setExamGrade(int examGrade) {
     m_examGrade = examGrade;
 }
+
+void Student::addGradeRecord(QList<Student*> &list,
+                             const QString &studentName,
+                             int grade,
+                             int course,
+                             const QString &group,
+                             const QString &subject)
+{
+    Student *stud = new Student(studentName, grade, subject, course, group, false, 0);
+    list.append(stud);
+}
+
+void Student::updateGradeRecord(Student* stud,
+                                const QString &studentName,
+                                int grade,
+                                int course,
+                                const QString &group)
+{
+    if (stud) {
+        stud->setName(studentName);
+        stud->setGrade(grade);
+        stud->setCourse(course);
+        stud->setGroup(group);
+    }
+}
+
+void Student::removeGradeRecord(QList<Student*> &list, int index)
+{
+    if (index >= 0 && index < list.size()) {
+        Student *stud = list.takeAt(index);
+        delete stud;
+    }
+}
+
+void Student::addExamCreditRecord(QList<Student*> &list,
+                                  const QString &studentName,
+                                  bool credit,
+                                  int examGrade,
+                                  int course,
+                                  const QString &group,
+                                  const QString &subject)
+{
+    Student *stud = new Student(studentName, 0, subject, course, group, credit, examGrade);
+    list.append(stud);
+}
+
+void Student::updateExamCreditRecord(Student* stud,
+                                     const QString &studentName,
+                                     bool credit,
+                                     int examGrade,
+                                     int course,
+                                     const QString &group)
+{
+    if (stud) {
+        stud->setName(studentName);
+        stud->setCourse(course);
+        stud->setGroup(group);
+        stud->setCredit(credit);
+        stud->setExamGrade(examGrade);
+    }
+}
+
+void Student::removeExamCreditRecord(QList<Student*> &list, int index)
+{
+    if (index >= 0 && index < list.size()) {
+        Student *stud = list.takeAt(index);
+        delete stud;
+    }
+}
