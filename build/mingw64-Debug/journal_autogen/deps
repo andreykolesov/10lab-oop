@@ -241,6 +241,9 @@ journal_autogen/timestamp: \
 	D:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
 	D:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
 	D:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
+	D:/qt/Tools/mingw_64_2/include/QtCore/QList \
+	D:/qt/Tools/mingw_64_2/include/QtCore/QMap \
+	D:/qt/Tools/mingw_64_2/include/QtCore/QString \
 	D:/qt/Tools/mingw_64_2/include/QtCore/q20memory.h \
 	D:/qt/Tools/mingw_64_2/include/QtCore/q20type_traits.h \
 	D:/qt/Tools/mingw_64_2/include/QtCore/qalgorithms.h \

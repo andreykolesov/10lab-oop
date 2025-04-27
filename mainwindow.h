@@ -2,22 +2,50 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMap>
+#include <QList>
+#include <QString>
+#include "ui_mainwindow.h"
+#include "student.h"
+#include "smart_ptr.h"
 
-QT_BEGIN_NAMESPACE
+struct SubjectRecords {
+    QList<smart_ptr<Student>> grades;
+    QList<smart_ptr<Student>> examCredits;
+};
+
 namespace Ui {
 class MainWindow;
 }
-QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
-
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
+
+    QMap<QString, SubjectRecords> subjectsRecords;
+
+    void refreshGradesTable();
+    void refreshExamCreditTable();
+
+    QString currentSubject() const;
+
+public:
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+    void addSubject();
+    void removeSubject();
+    void subjectSelectionChanged();
+
+    void addGradeRecord();
+    void updateGradeRecord();
+    void removeGradeRecord();
+
+    void addExamCreditRecord();
+    void updateExamCreditRecord();
+    void removeExamCreditRecord();
 };
-#endif // MAINWINDOW_H
+
+#endif

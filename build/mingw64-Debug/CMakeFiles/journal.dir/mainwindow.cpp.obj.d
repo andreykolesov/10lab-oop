@@ -352,6 +352,12 @@ CMakeFiles\journal.dir\mainwindow.cpp.obj: \
  D:/qt/Tools/mingw_64_2/include/QtGui/qcursor.h \
  D:/qt/Tools/mingw_64_2/include/QtGui/qbitmap.h \
  D:/qt/Tools/mingw_64_2/include/QtWidgets/qtabwidget.h \
+ D:/qt/Tools/mingw_64_2/include/QtCore/QMap \
+ D:/qt/Tools/mingw_64_2/include/QtCore/qmap.h \
+ D:/qt/Tools/mingw_64_2/include/QtCore/QList \
+ D:/qt/Tools/mingw_64_2/include/QtCore/qlist.h \
+ D:/qt/Tools/mingw_64_2/include/QtCore/QString \
+ D:/qt/Tools/mingw_64_2/include/QtCore/qstring.h \
  D:/qt\ projects/journal/build/mingw64-Debug/journal_autogen/include/ui_mainwindow.h \
  D:/qt/Tools/mingw_64_2/include/QtCore/QVariant \
  D:/qt/Tools/mingw_64_2/include/QtCore/qvariant.h \
@@ -425,4 +431,11 @@ CMakeFiles\journal.dir\mainwindow.cpp.obj: \
  D:/qt/Tools/mingw_64_2/include/QtWidgets/qtableview.h \
  D:/qt/Tools/mingw_64_2/include/QtWidgets/QVBoxLayout \
  D:/qt/Tools/mingw_64_2/include/QtWidgets/QWidget \
- D:/qt/Tools/mingw_64_2/include/QtWidgets/qwidget.h
+ D:/qt/Tools/mingw_64_2/include/QtWidgets/qwidget.h \
+ D:\qt\ projects\journal\student.h D:\qt\ projects\journal\smart_ptr.h \
+ D:/qt/Tools/mingw_64_2/include/QtWidgets/QMessageBox \
+ D:/qt/Tools/mingw_64_2/include/QtWidgets/qmessagebox.h \
+ D:/qt/Tools/mingw_64_2/include/QtWidgets/qdialog.h \
+ D:/qt/Tools/mingw_64_2/include/QtWidgets/QInputDialog \
+ D:/qt/Tools/mingw_64_2/include/QtWidgets/qinputdialog.h \
+ D:/qt/Tools/mingw_64_2/include/QtWidgets/qlineedit.h

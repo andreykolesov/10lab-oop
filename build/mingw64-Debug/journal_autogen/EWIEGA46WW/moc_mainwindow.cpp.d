@@ -1,5 +1,7 @@
 D:/qt\ projects/journal/build/mingw64-Debug/journal_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/qt\ projects/journal/mainwindow.h \
   D:/qt\ projects/journal/build/mingw64-Debug/journal_autogen/moc_predefs.h \
+  D:/qt\ projects/journal/smart_ptr.h \
+  D:/qt\ projects/journal/student.h \
   D:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   D:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   D:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -198,6 +200,9 @@ D:/qt\ projects/journal/build/mingw64-Debug/journal_autogen/EWIEGA46WW/moc_mainw
   D:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   D:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   D:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
+  D:/qt/Tools/mingw_64_2/include/QtCore/QList \
+  D:/qt/Tools/mingw_64_2/include/QtCore/QMap \
+  D:/qt/Tools/mingw_64_2/include/QtCore/QString \
   D:/qt/Tools/mingw_64_2/include/QtCore/q20memory.h \
   D:/qt/Tools/mingw_64_2/include/QtCore/q20type_traits.h \
   D:/qt/Tools/mingw_64_2/include/QtCore/qalgorithms.h \
